@@ -1,0 +1,29 @@
+<%= form_tag '/searches', method: "POST", id: 'testdude', remote: true do %>
+
+
+<div class="col-lg-9">
+
+<div class="col-lg-3"></div>
+  
+  
+  <div class="input-group">
+
+    <div class="input-group-btn">
+      <%= select_tag "search_type", "<option>Filter By...</option><option>Device Name</option><option>Manufacturer</option><option>Description</option>".html_safe, class: 'form-control', id: 'dropdown' %>  
+    </div>
+
+    <%= text_field_tag("search[search_term]", nil, placeholder: 'Search here...', class: 'form-control', autofocus: true) %>
+
+      <div class="input-group-btn">
+        <%= submit_tag "Show Reports", class: 'form-control', id: 'submit-button' %>
+      </div>
+
+    </div>
+
+  </div>
+
+<br>  
+<br>  
+<br>  
+<br>  
+<% end %>

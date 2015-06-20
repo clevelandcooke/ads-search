@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: changeMe1
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: medi-search
+  
+
+production:
+  <<: *default
+  database: medi-search_prod
+  
+
+
+

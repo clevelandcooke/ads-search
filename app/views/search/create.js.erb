@@ -1,0 +1,3 @@
+$('body').html("<%= j render partial: 'recent_events', locals: {search_term: @search_term, recent_events: @recent_events, search_type: @search_type} %>");
+$('body').prepend("<%= j render partial: 'form', locals: {search: Search.new} %>");
+$('div, nav').fadeIn(500);

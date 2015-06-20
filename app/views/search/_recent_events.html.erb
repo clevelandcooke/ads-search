@@ -1,0 +1,71 @@
+
+
+
+<% if search_type == "generic_name" %>
+  <div style="display: none" >
+    <div id="party">
+      <h1>Listing of adverse event reports containing: <span id="header-term"><%= search_term %></span></h1>
+    </div>
+  <% recent_events.each do |event| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 id="report-number" >Report # <%= event.report_number %></h4>
+        <ul>
+          <li id="top-dog">Generic Name: <%= event.generic_name %> </li>
+          <li>Brand Name - Full Name: <%= event.brand_name %></li>
+          <li>Event Type: <%= event.event_type %></li>
+          <li>Reported By: <%= event.reporter_occupation %></li>
+          <li>Date Of Event: <%= event.date_of_event %></li>
+          <li>Manufacturer: <%= event.manufacturer_name %></li>
+          <li>Description: <%= event.mdr_text %></li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  </div>
+<% elsif %>
+  <div class="" style="display: none" >
+    <div id="party">
+      <h1>Listing of adverse event reports containing: <span id="header-term"><%= search_term %></span></h1>
+    </div>
+  <% recent_events.each do |event| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 id="report-number" >Report # <%= event.report_number %></h4>
+        <ul>
+          <li id="top-dog">Manufacturer: <%= event.manufacturer_name %></li>
+          <li>Device - Generic Name: <%= event.generic_name %> </li>
+          <li>Device Brand Name - Full Name: <%= event.brand_name %></li>
+          <li>Event Type: <%= event.event_type %></li>
+          <li>Reported By: <%= event.reporter_occupation %></li>
+          <li>Date Of Event: <%= event.date_of_event %></li>
+          <li>Description: <%= event.mdr_text %></li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  </div>
+<% else %>
+  <div class="" style="display: none" >
+    <div id="party">
+      <h1>Listing of adverse event reports containing: <span id="header-term"><%= search_term %></span></h1>
+    </div>
+  <% recent_events.each do |event| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 id="report-number" >Report # <%= event.report_number %></h4>
+        <ul>
+          <li>Device - Generic Name: <%= event.generic_name %> </li>
+          <li>Manufacturer: <%= event.manufacturer_name %></li>
+          <li>Device Brand Name - Full Name: <%= event.brand_name %></li>
+          <li>Event Type: <%= event.event_type %></li>
+          <li>Reported By: <%= event.reporter_occupation %></li>
+          <li>Date Of Event: <%= event.date_of_event %></li>
+          <li>Description: <%= event.mdr_text %></li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+  </div>
+<% end %>
+

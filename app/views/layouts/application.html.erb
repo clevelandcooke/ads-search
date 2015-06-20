@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IBA FDA GSA TEST</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
+</head>
+<body>
+  <%= yield %>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div>
+    <p id="footer-text" >Created by <a href="http://www.ibacorp.us" title="">IBA Quick Strike Recon Team</a>.</p>
+    <a href="https://github.com/iba" title=""><p>View Source on Github</p></a>
+  </div>
+</nav>
+
+
+</body>
+</html>
