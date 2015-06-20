@@ -36,5 +36,4 @@ actually are implementing. No pie-in-the-sky-never-gonna-happen stuff.
 Link to your blog, twitter, etc!
 
 ## License
-
-Medi Search is MIT Licensed. See LICENSE for details.
+IBA
