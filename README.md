@@ -1,4 +1,4 @@
-# Medi Search
+# Medi ADS Search
 
 ## Description
 
