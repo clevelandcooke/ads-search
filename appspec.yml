@@ -22,7 +22,7 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: ./*/
+  - source: ./app/
     destination: /home/ubuntu/public/server
 #  - source: ./test/
 #    destination: /home/ubuntu/public/test
@@ -89,7 +89,7 @@ hooks:
       # runas: 
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  BeforeInstall:
+#  BeforeInstall:
 #    - location: ./deploy/beforeinstall.sh
       # timeout:
       # runas: 
@@ -98,7 +98,7 @@ hooks:
       # runas:
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  AfterInstall:
+ # AfterInstall:
  #   - location: ./deploy/afterinstall.sh    
       # timeout: 
       # runas:
@@ -107,7 +107,7 @@ hooks:
       # runas:
 # During the ApplicationInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  ApplicationStart:
+ # ApplicationStart:
   #  - location: ./deploy/start.sh    
       # timeout: 
       # runas:
