@@ -22,10 +22,10 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: ./server/
+  - source: ./*/
     destination: /home/ubuntu/public/server
-  - source: ./test/
-    destination: /home/ubuntu/public/test
+#  - source: ./test/
+#    destination: /home/ubuntu/public/test
 # For deployments to Amazon Linux and Ubuntu Server instances,
 #   you can specify a "permissions" 
 #   section here that describes special permissions to apply to the files 
@@ -90,7 +90,7 @@ hooks:
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: ./deploy/beforeinstall.sh
+#    - location: ./deploy/beforeinstall.sh
       # timeout:
       # runas: 
     # - location: ./deploy/start.sh
@@ -99,7 +99,7 @@ hooks:
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   AfterInstall:
-    - location: ./deploy/afterinstall.sh    
+ #   - location: ./deploy/afterinstall.sh    
       # timeout: 
       # runas:
     # - location: 
@@ -108,7 +108,7 @@ hooks:
 # During the ApplicationInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
-    - location: ./deploy/start.sh    
+  #  - location: ./deploy/start.sh    
       # timeout: 
       # runas:
     # - location: 
